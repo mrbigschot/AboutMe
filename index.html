@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Paul Schot</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="spinner.css">
+
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>Paul Schot</h1>
+            </div>
+            
+            <div class="sidebar-content">
+                <div class="menu">
+                    <a class="menuItem" href="javascript:swapContent('about')">About Me</a>
+                    <a class="menuItem" href="javascript:swapContent('software_development')">Software Development</a>
+                    <a class="menuItem" href="javascript:swapContent('education')">Education</a>
+                    <a class="menuItem" href="javascript:swapContent('music')">Music</a>
+                    <a class="menuItem" href="javascript:void(0)">Drawings - Coming Soon</a>
+                </div>
+
+				<div class="link-container">
+					<a href="https://www.linkedin.com/in/paulschot/">
+						<i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+					</a>
+				</div>
+
+                <div class="copyright">&copy; 2022 Paul Schot</div>
+            </div>
+        </div>
+        <div class="content">
+            <div id="about" class="content-block active">
+                <h2>About Me</h2>
+				<div class="content-block-content">
+					<p>
+						Hello there and welcome to my web page! As you may have noticed, my name is Paul!
+					</p>
+
+					<p>
+						I am a software developer based in the PNW, though that's certainly not the only thing about
+						me that makes me who I am. I also love to play and create music, run track & field, and draw 
+						pictures. In each of these passions of mine, I am driven by the desire to learn and improve. 
+						Every block of code can be refactored to be more legible, elegant, or efficient; every race 
+						or jump is an opportunity to best your past self; and you can always become more fluent on 
+						your instrument.
+					</p>
+
+					<p>
+						I also like to think about how smaller pieces work together to become something large, sometimes
+						greater than the sum of its parts. A bass line or horn solo can be great on its own, but when
+						combined with the rest of the band playing along, the song is taken to a whole new level. Each 
+						stroke of a pencil is fairly unremarkable in isolation, but put enough on a piece of paper and 
+						an amazing image might appear. Similarly, I like seeing the parts of a computer program work 
+						together. Small methods and blocks of code accumulate to create something that accomplishes a 
+						pretty substantial task. Figuring out which puzzle piece to use and where it goes and then 
+						finally seeing the big picture at the end is something that I enjoy.
+					</p>
+
+					<p>
+						Anyway, feel free to peruse the stuff that I put on here! I hope you find something that you like!
+					</p>
+                </div>
+
+            </div>
+
+            <div id="software_development" class="content-block">
+                <h2>Software Development</h2>
+                <div class="content-block-content">
+                    <h3>Employment</h3>
+                    <div class="employment-block">
+                        <h4>Lead Application Developer, Net Assets Corporation <span>MARCH 2018 - PRESENT</span></h4>
+                        <p>
+                            Primary developer on multiple web-based applications, refining and refactoring legacy code
+                            and developing new features/products. Communicated with customers to develop solutions that 
+                            meet their needs. Mostly worked in back-end technologies, but frequently worked on front-end 
+                            aspects as well. Duties also occasionally involved developing and running a QA suite using
+                            Selenium WebDriver.
+                        </p>
+                    </div>
+                    <div class="employment-block">
+                        <h4>Intern, Portland State University <span>SUMMER 2016</span></h4>
+                        <p>
+                            Worked with two other interns under Professor Andrew Black to improve the Grace programming 
+                            language and its documentation. Debugged existing code, wrote built-in class methods utilizing 
+                            unit tests, implemented a state-machine lexer, etc.
+                        </p>
+                    </div>
+    
+                    <h3>Skills</h3>
+                    <div class="skillset">
+                        <div class="skill">Java</div>
+                        <div class="skill">JavaScript</div>
+                        <div class="skill">MySQL</div>
+                        <div class="skill">C#</div>
+                        <div class="skill">C</div>
+                        <div class="skill">PHP</div>
+                        <div class="skill">MATLAB</div>
+                        <div class="skill">Python</div>
+                        <div class="skill">Swift</div>
+                        <div class="skill">HTML</div>
+                        <div class="skill">CSS</div>
+                        <div class="skill">XML</div>
+                        <div class="skill">XSL</div>
+                        <div class="skill">LaTeX</div>
+                        <div class="skill">Netbeans IDE</div>
+                        <div class="skill">Eclipse IDE</div>
+                        <div class="skill">Visual Studio Code</div>
+                        <div class="skill">Xcode</div>
+                        <div class="skill">Selenium WebDriver</div>
+                        <div class="skill">Git</div>
+                        <div class="skill">SVN</div>
+                        <div class="skill">Debugging</div>
+                        <div class="skill">Object Oriented Programming</div>
+                        <div class="skill">Teamwork</div>
+                        <div class="skill">Time Management</div>
+                        <div class="skill">Communication</div>
+                    </div>
+    
+                    <h3>Projects</h3>
+                    <div class="project-block">
+                        <div class="project-header">
+                            <div>
+                                <h4>Swarm Intelligence Simulation</h4>
+                            </div>
+                            <div>
+                                <div class="skillset">
+                                    <div class="skill">Java</div>
+                                </div>
+                                <a href="https://github.com/mrbigschot/SISP" target="_blank">View Code</a>
+                            </div>
+                        </div>
+                        <p>
+                            Inspired by the ability of an ant colony to locate food and communicate to each other, as well 
+                            as the effort to simulate realistic flock patterns, I chose swarm intelligence as the subject of 
+                            my Senior Thesis Project at Willamette University. In this application, one to two swarms of robot 
+                            "bugs" are searching an environment filled with obstacles for a finite resource. The "bugs" must 
+                            navigate the maze efficiently to find their target quickly, but also must communicate with the rest
+                            of the swarm in order to quickly gather the resource, as one "bug" can only carry so much back to 
+                            the hive. Many variables can be set that define the behavior of the individuals within the swarm.
+                        </p>
+                    </div>
+                    <div class="project-block">
+                        <div class="project-header">
+                            <div>
+                                <h4>Human Body Digitizer Web Tool</h4>
+                            </div>
+                            <div>
+                                <div class="skillset">
+                                    <div class="skill">HTML</div>
+                                    <div class="skill">CSS</div>
+                                    <div class="skill">JavaScript</div>
+                                </div>
+                                <a href="https://github.com/mrbigschot/Digitizer" target="_blank">View Code</a>
+                            </div>
+                        </div>
+                        <p>
+                            Developed an online human body digitizer tool to be used in Pacific University Exercise Science 
+                            classes. Datasets and images are provided by instructors and then can be cycled through and clicked
+                            on to generate coordinates in a downloadable spreadsheet.
+                        </p>
+                    </div>
+                    <div class="project-block">
+                        <div class="project-header">
+                            <div>
+                                <h4>Braitenberg Vehicle/Genetic Algorithm Simulation</h4>
+                            </div>
+                            <div>
+                                <div class="skillset">
+                                    <div class="skill">Java</div>
+                                </div>
+                                <a href="https://github.com/mrbigschot/BraitenbergNaturalSelection" target="_blank">View Code</a>
+                            </div>
+                        </div>
+                        <p>
+                            A combination of <a target="_blank" href="https://en.wikipedia.org/wiki/Braitenberg_vehicle">Braitenberg Vehicles</a> and 
+                            natural selection algorithms. Some vehicles are assigned the role of predator and others prey, with sensors corresponding
+                            to their desired food source and threat. Fitness is determined by how much the vehicles "eat". Traits that
+                            benefit survival are carried on to the next generation, and traits that hinder survival are eliminated.
+                        </p>
+                    </div>
+                    <div class="project-block">
+                        <div class="project-header">
+                            <div>
+                                <h4>Hexapawn Rote Learner</h4>
+                            </div>
+                            <div>
+                                <div class="skillset">
+                                    <div class="skill">Java</div>
+                                </div>
+                                <a href="https://github.com/mrbigschot/PawnPlayer" target="_blank">View Code</a>
+                            </div>
+                        </div>
+                        <p>
+                            Developed an AI that learns how to play hexapawn, a simplified version of chess where the only pieces 
+                            are pawns. The AI can play against a human opponent and gradually learn how to play the game, or it can 
+                            be trained against a computer opponent utilizing random play styles and MinMax strategies to quickly train 
+                            it.
+                        </p>
+                    </div>
+                    <!-- <div class="project-block">
+                        <div class="project-header">
+                            <div>
+                                <h4>GameBoy Style Pokémon Game</h4>
+                            </div>
+                            <div>
+                                <div class="skillset">
+                                    <div class="skill">Java</div>
+                                </div>
+                                <a href="" target="_blank">View Code</a>
+                            </div>
+                        </div>
+                        <p>
+                            An exploration into JavaFX and how to program gameplay rules and logic, as well as an attempt to implement 
+                            changes that I wish were in the games I grew up with.
+                        </p>
+                    </div> -->
+                </div>
+            </div>
+
+            <div id="education" class="content-block">
+                <h2>Education</h2>
+
+                <div class="content-block-content">
+                    <div>
+                        <div class="education-block">
+                            <h3>Willamette University <span>Salem, OR</span></h3>
+                            
+                            <p>Bachelor of Arts in Computer Science, Minors in Physics and Mathematics</p>
+                            <p>Graduated May 2017, <em>cum laude</em>, G.P.A. 3.83</p>
+                        
+                            <div>
+                                <h4>Honors and Awards</h4>
+                                <ul>
+                                    <li>Phi Beta Kappa inductee 2017</li>
+                                    <li>Computer Science Department Honors 2017</li>
+                                    <li>National Merit Scholarship 2013-2017</li>
+                                    <li>Gilbert Clausman music scholarship 2014-2016</li>
+                                    <li>Northwest Conference Scholar-Athlete 2014-2017</li>
+                                </ul>
+                            </div>
+    
+                            <div>
+                                <h4>Courses Taken</h4>
+                                <ul>
+                                    <li>Analysis of Algorithms</li>
+                                    <li>Architecture and Compilers</li>
+                                    <li>Computational Science with MATLAB</li>
+                                    <li>Data Structures</li>
+                                    <li>Machine Learning</li>
+                                    <li>Mobile Application Development (iOS/Android)</li>
+                                    <li>Simulation of Natural and Computer Systems</li>
+                                    <li>Classical Mechanics</li>
+                                    <li>Modern Physics</li>
+                                    <li>Graph Theory</li>
+                                    <li>Linear Algebra</li>
+                                    <li>Multivariable Calculus</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <h3>Portland Community College <span>Portland, OR</span></h3>
+                        <p>I took some classes after graduating from Willamette to learn some new skills</p>
+                        
+                        <div>
+                            <h4>Courses Taken</h4>
+                            <ul>
+                                <li>C Programming</li>
+                                <li>Introduction to Programming Using C#.NET</li>
+                                <li>JavaScript for Web Developers</li>
+                                <li>PHP Web Development I</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Forest Grove High School <span>Forest Grove, OR</span></h3>
+                        <p>Honors Diploma</p>
+                        <p>Graduated June 2013, top 1% of class, G.P.A. 3.94 (4.27 weighted)</p>
+
+                        <div>
+                            <h4>Honors and Awards</h4>
+                            <ul>
+                                <li>National Merit Scholar 2013 (top 0.5% of all entrants)</li>
+                                <li>Viking Achievement Award 2013 (student-athlete recognized by faculty for overall outstanding contributions to Forest Grove High School)</li>
+                                <li>AP Scholar 2013</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="music" class="content-block">
+                <h2>Music</h2>
+
+                <div class="content-block-content">
+                    <h3>Elementary and High School</h3>
+
+                    <p>
+                        I began playing the alto saxophone in 2005 at the age of 11. While in 7th grade I was a participant 
+                        in the OMEA District 3 Honor Band for alto saxophone. 7th grade also marked the beginning of my interest 
+                        in jazz, as I joined the school's jazz band, which met in the mornings before school started. Once I got 
+                        to the 8th grade I made the switch to tenor saxophone. 
+                    </p> 
+                    <p>
+                        I was a member of the symphonic band, pep band, and jazz ensemble throughout my time at Forest Grove High 
+                        School. My primary instrument was still the tenor saxophone, but I played baritone sax for the pep band 
+                        during basketball season my senior year (our main bari sax player also happened to be on the basketball 
+                        team). I again made the OMEA District 3 Honor band sophomore, junior, and senior year for tenor sax. I played 
+                        in the pit band for a few of the high school's musical theatre shows, including <em>Grease</em> and 
+                        <em>How To Succeed in Business Without Really Trying</em>. My senior year I also qualified as a tenor 
+                        saxophonist for the Music in May Festival held at Pacific University.
+                    </p>
+                    <p>
+                        High school was also when I first began gigging outside of school. Bassist Ian Lindsay and drummer Maxwell 
+                        Malizia and I formed a jazz trio, mostly playing at wine shops and restaurants in the Forest Grove area.
+                    </p>
+    
+                    <h3>College</h3>
+                    <p>
+                        I was a member of the Willamette University Jazz Collective (directed by Dr. James Miley) all four years of 
+                        college playing tenor and baritone sax, as well as a few jazz combos on tenor sax. We put on multiple concerts 
+                        throughout the academic year and played at the Reno Jazz Festival twice, as well as a few times at Jimmy Mak's 
+                        jazz club in Portland, OR. I also took saxophone lessons under the tutelage of Sean Flannery.
+                    </p>
+    
+                    <h3>Big Mama Gayle and Her Sugar Daddies</h3>
+                    <p>
+                        During my junior year of high school, my band director Leonard Ostwalt came up to me one day and asked "Do you 
+                        want to be in a rock band?" I obviously responded with an emphatic yes, and Mr. O put me in touch with Gayle Hayden, a local 
+                        band leader who had an opening for a sax player in her group, Big Mama Gayle and Her Sugar Daddies. The band 
+                        plays a variety of genres spanning Rock 'n' Roll, R&B, blues, country, latin, and funk. We've played at 
+                        many different events and venues along the Willamette Valley in the time since I've joined, including the 
+                        McMinnville UFO Festival, at McMenamins Grand Lodge and Hotel Oregon, and others.
+                    </p>
+    
+                    <h3>Acapella App</h3>
+                    <p>
+                        In the early days of the COVID-19 pandemic, I was introduced to the Acapella App and immediately became 
+                        enthralled by the worldwide community of musicians and collaborating on and arranging tunes. Here is a list
+                        of some of my favorite projects:
+                    </p>
+                    
+                    <div id="acaLinks">
+                        <div class="acapellaLink">
+                            <a target="_blank" href="https://mixcord.co/acapella/p/7ZvwKEQX1PoUEikNa5Q6Qg/">The Golden Hour <span class="artist">by Cory Wong and Dave Koz</span></a>
+                        </div>
+                        <div class="acapellaLink">
+                            <a target="_blank" href="https://mixcord.co/acapella/p/v4Crww5X1BLeHB6GWxXnjw/">The Boardwalk <span class="artist">by Cory Wong</span></a>
+                        </div>
+                        <div class="acapellaLink">
+                            <a target="_blank" href="https://mixcord.co/acapella/p/zdGFRAeKH5tRT8aSpkzJKQ/">Can't Hide Love <span class="artist">by Earth, Wind & Fire</span></a>    
+                        </div>
+                        <div class="acapellaLink">
+                            <a target="_blank" href="https://mixcord.co/acapella/p/-2RF9tU7bxrIM1bDYi1a_Q/">Pick Up the Pieces <span class="artist">by Average White Band</span></a>    
+                        </div>
+                        <div class="acapellaLink">
+                            <a target="_blank" href="https://mixcord.co/acapella/p/Sp7XIzL-4jc87QPOwqo2EQ/">When We Get By <span class="artist">by D'Angelo</span></a>    
+                        </div>
+                        <div class="acapellaLink">
+                            <a target="_blank" href="https://mixcord.co/acapella/p/94B7bUnl-oEKYGFN3vZN0w/">In The Stone (Intro) <span class="artist">by Earth, Wind & Fire</span></a>    
+                        </div>
+                        <div class="acapellaLink">
+                            <a target="_blank" href="https://mixcord.co/acapella/p/BVn3_chOTz3ixQvNbB89QA/">Isn't She Lovely <span class="artist">by Stevie Wonder</span></a>    
+                        </div>
+                        <div class="acapellaLink">
+                            <a target="_blank" href="https://mixcord.co/acapella/p/_4VOAW7XTS0StS9_eGvlJQ/">Venus <span class="artist">by Shocking Blue</span></a>    
+                        </div>
+                        <div class="acapellaLink">
+                            <a target="_blank" href="https://mixcord.co/acapella/p/DGq-3gHTzmZie5IXGzRBzw/">Zigaboogaloo <span class="artist">by Nicholas Payton</span></a>    
+                        </div>
+                        <div class="acapellaLink">
+                            <a target="_blank" href="https://mixcord.co/acapella/p/mrmBAvQ17sRDCFrtEUKtiw/">Overjoyed <span class="artist">by Stevie Wonder</span></a>    
+                        </div>                    
+                        <div class="acapellaLink">
+                            <a target="_blank" href="https://mixcord.co/acapella/p/6zgok0d2PX8WjFsXh3OgDg/">Got To Be Real <span class="artist">by Cheryl Lynn</span></a>    
+                        </div>
+                        <div class="acapellaLink">
+                            <a target="_blank" href="https://mixcord.co/acapella/p/s89V39IOzfMls8b1-kyUdg/">Song for Bilbao <span class="artist">by Michael Brecker</span></a>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="spinner">
+                <div class="spin-container">
+                    <div class="spin" id="loader"></div>
+                    <div class="spin" id="loader2"></div>
+                    <div class="spin" id="loader3"></div>
+                    <div class="spin" id="loader4"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
