@@ -81,13 +81,17 @@
                     <div class="employment-block">
                         <h4>Lead Application Developer, Net Assets Corporation <span>JUNE 2020 - PRESENT</span></h4>
                         <p>
-                            Primary developer on multiple web-based applications, refining and refactoring legacy code
-                            and developing new features/products. Communicated with customers to develop solutions that 
-                            meet their needs. Mostly worked in back-end technologies, but frequently worked on front-end 
-                            aspects as well. Duties also occasionally involved developing and running a QA suite using
-                            Selenium WebDriver. Additionally manage the QA team responsible for automated and manual 
-							testing of applications.
+                            Primary developer for multiple web applications, refining legacy code and developing new features. 
+                            Communicating with customers to develop solutions. Manage the QA team responsible for automated and 
+                            manual testing of applications.
                         </p>
+                        <h5>Highlights</h5>
+                        <ul>
+                            <li>Wrote a significant portion of the code base for two new products now used by municipalities in multiple U.S. states.</li>
+                            <li>Rebuilt the financial engine of an older product allowing for more accurate calculations while also making it easier to fix mistakes due to user error.</li>
+                            <li>Implemented change from storing PDF documents in a company-maintained database to AWS S3 storage.</li>
+                            <li>Programmed user-input validation tools for use across all products allowing developers to reuse existing logic more efficiently.</li>
+                        </ul>
                     </div>
                     <div class="employment-block">
                         <h4>Web Application Developer, Net Assets Corporation <span>MARCH 2018 - JUNE 2020</span></h4>
@@ -107,35 +111,62 @@
                             unit tests, implemented a state-machine lexer, etc.
                         </p>
                     </div>
-    
-                    <h3>Skills</h3>
-                    <div class="skillset">
-                        <div class="skill">Java</div>
-                        <div class="skill">JavaScript</div>
-                        <div class="skill">MySQL</div>
-                        <div class="skill">C#</div>
-                        <div class="skill">C</div>
-                        <div class="skill">PHP</div>
-                        <div class="skill">MATLAB</div>
-                        <div class="skill">Python</div>
-                        <div class="skill">Swift</div>
-                        <div class="skill">HTML</div>
-                        <div class="skill">CSS</div>
-                        <div class="skill">XML</div>
-                        <div class="skill">XSL</div>
-                        <div class="skill">LaTeX</div>
-                        <div class="skill">Netbeans IDE</div>
-                        <div class="skill">Eclipse IDE</div>
-                        <div class="skill">Visual Studio Code</div>
-                        <div class="skill">Xcode</div>
-                        <div class="skill">Selenium WebDriver</div>
-                        <div class="skill">Git</div>
-                        <div class="skill">SVN</div>
-                        <div class="skill">Debugging</div>
-                        <div class="skill">Object Oriented Programming</div>
-                        <div class="skill">Teamwork</div>
-                        <div class="skill">Time Management</div>
-                        <div class="skill">Communication</div>
+                    
+                    <div class="skills-header">
+                        <h3>Skills</h3>
+                        <fieldset class="skillset-filters" onchange="filterSkills()">
+                            <h4>Filters:</h4>
+                            <div>
+                                <input type="radio" id="skillset_filter_all" name="skillset_filter" value="all" checked="checked">
+                                <label for="skillset_filter_all">All Skills</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="skillset_filter_language" name="skillset_filter" value="language">
+                                <label for="skillset_filter_language">Languages</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="skillset_filter_tech" name="skillset_filter" value="tech">
+                                <label for="skillset_filter_tech">Technologies</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="skillset_filter_other" name="skillset_filter" value="other">
+                                <label for="skillset_filter_other">Miscellaneous</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    
+                    <div id="skillset" class="skillset">
+                        <div class="skill advanced language">Java</div>
+                        <div class="skill proficient language">C#</div>
+                        <div class="skill advanced language">JavaScript</div>
+                        <div class="skill proficient language">TypeScript</div>
+                        <div class="skill advanced language">SQL</div>
+                        <div class="skill familiar language">C</div>
+                        <div class="skill familiar language">PHP</div>
+                        <div class="skill familiar language">MATLAB</div>
+                        <div class="skill familiar language">Python</div>
+                        <div class="skill familiar language">Swift</div>
+                        <div class="skill advanced language">HTML</div>
+                        <div class="skill proficient language">CSS</div>
+                        <div class="skill advanced language">XML</div>
+                        <div class="skill proficient tech">XSLT</div>
+                        <div class="skill familiar language">LaTeX</div>
+                        <div class="skill proficient tech">Visual Studio Code</div>
+                        <div class="skill familiar tech">Netbeans IDE</div>
+                        <div class="skill familiar tech">Eclipse IDE</div>
+                        <div class="skill familiar tech">Xcode</div>
+                        <div class="skill advanced tech">Git</div>
+                        <div class="skill advanced tech">SVN</div>
+                        <div class="skill proficient tech">AJAX</div>
+                        <div class="skill proficient tech">JSON</div>
+                        <div class="skill proficient tech">Selenium WebDriver</div>
+                        <div class="skill familiar tech">Apache Tomcat</div>
+                        <div class="skill advanced other">Object Oriented Programming</div>
+                        <div class="skill advanced other">Debugging</div>
+                        <div class="skill advanced other">Teamwork</div>
+                        <div class="skill advanced other">Time Management</div>
+                        <div class="skill advanced other">Communication</div>
+                        <div class="skill advanced other">Organization</div>
                     </div>
     
                     <h3>Projects</h3>
@@ -219,6 +250,22 @@
                             it.
                         </p>
                     </div>
+                    <div class="project-block">
+                        <div class="project-header">
+                            <div>
+                                <h4>Graph Theory Path Finder</h4>
+                            </div>
+                            <div>
+                                <div class="skillset">
+                                    <div class="skill">C#</div>
+                                </div>
+                                <a href="https://github.com/mrbigschot/PathFinder" target="_blank">View Code</a>
+                            </div>
+                        </div>
+                        <p>
+                            A small application that traverses a graph, finding the optimal path between two vertices.
+                        </p>
+                    </div>
                     <!-- <div class="project-block">
                         <div class="project-header">
                             <div>
@@ -276,6 +323,7 @@
                                     <li>Graph Theory</li>
                                     <li>Linear Algebra</li>
                                     <li>Multivariable Calculus</li>
+                                    <li>Foundations of Advanced Mathematics</li>
                                 </ul>
                             </div>
                         </div>
@@ -365,6 +413,9 @@
                     </p>
                     
                     <div id="acaLinks">
+                        <div class="acapellaLink">
+                            <a target="_blank" href="https://mixcord.co/acapella/p/T1tNqnKTYNFiifoiNVTXtQ/">Caravan <span class="artist">by Duke Ellington</span></a>
+                        </div>
                         <div class="acapellaLink">
                             <a target="_blank" href="https://mixcord.co/acapella/p/7ZvwKEQX1PoUEikNa5Q6Qg/">The Golden Hour <span class="artist">by Cory Wong and Dave Koz</span></a>
                         </div>

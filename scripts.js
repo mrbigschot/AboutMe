@@ -19,3 +19,19 @@ function swapContent(nextID) {
         }
     }, 1500);
 }
+
+function filterSkills() {
+    document.getElementById("skillset").classList.remove("show_all");
+    document.getElementById("skillset").classList.remove("show_language");
+    document.getElementById("skillset").classList.remove("show_tech");
+    document.getElementById("skillset").classList.remove("show_other");
+    if (document.getElementById("skillset_filter_all").checked) {
+        document.getElementById("skillset").classList.add("show_all");
+    } else if (document.getElementById("skillset_filter_language").checked) {
+        document.getElementById("skillset").classList.add("show_language");        
+    } else if (document.getElementById("skillset_filter_tech").checked) {
+        document.getElementById("skillset").classList.add("show_tech");        
+    } else if (document.getElementById("skillset_filter_other").checked) {
+        document.getElementById("skillset").classList.add("show_other");       
+    }
+}

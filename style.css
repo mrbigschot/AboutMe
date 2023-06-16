@@ -3,6 +3,7 @@ html {
     --light-color: rgb(199, 221, 211);
     --dark-color: rgb(57, 57, 58);
     --accent-color: rgb(80, 140, 164);
+    --accent-color-2: rgb(132, 177, 196);
 }
 body {
     padding: 0px;
@@ -131,6 +132,23 @@ a.menuItem:hover {
     font-size: .75em;
     text-transform: none;
 }
+div.skills-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+fieldset.skillset-filters {
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    display: block;
+    width: fit-content;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+fieldset.skillset-filters h4 { display: inline-block; margin: 0; }
+fieldset.skillset-filters div { display: inline-block; }
+fieldset.skillset-filters div + div { margin-left: 8px; }
 
 div.skillset > div.skill {
     display: inline-block;
@@ -139,7 +157,35 @@ div.skillset > div.skill {
     padding: 0.25em 1.0em;
     border-radius: 8px;
     margin: 4px 2px 4px 2px;
+    border: 2px solid var(--accent-color);
+    position: relative;
 }
+div.skillset > div.skill.advanced {
+    background: var(--accent-color);
+    color: var(--light-color);
+}
+div.skillset > div.skill.proficient {
+    background: var(--accent-color-2);
+    color: var(--light-color);
+}
+div.skillset > div.skill.familiar {
+    background: transparent;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+div.skillset.show_language div.skill.tech,
+div.skillset.show_language div.skill.other {
+    display: none;
+}
+div.skillset.show_tech div.skill.language,
+div.skillset.show_tech div.skill.other {
+    display: none;
+}
+div.skillset.show_other div.skill.tech,
+div.skillset.show_other div.skill.language {
+    display: none;
+}
+
 div.employment-block,
 div.project-block {
     margin-top: 1em;
