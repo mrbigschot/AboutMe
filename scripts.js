@@ -1,4 +1,5 @@
 function swapContent(nextID) {
+    closeNavBar();
     var activeBlock = document.querySelector(".content-block.active");
     if (activeBlock && activeBlock.id === nextID) return;
 
@@ -10,12 +11,14 @@ function swapContent(nextID) {
 
     document.getElementById("spinner").classList.add("active");
     window.location = "#spinner";
+    scrollTo(0,0);
 
     setTimeout(function () {
         if (document.getElementById(nextID)) {
             document.getElementById("spinner").classList.remove("active");
             document.getElementById(nextID).classList.add("active");
             window.location = "#" + nextID;
+            scrollTo(0,0);
         }
     }, 1500);
 }
@@ -34,4 +37,13 @@ function filterSkills() {
     } else if (document.getElementById("skillset_filter_other").checked) {
         document.getElementById("skillset").classList.add("show_other");       
     }
+}
+
+function toggleNavBar() {
+    let navBar = document.getElementById("menu");
+    navBar.classList.toggle('active');
+}
+function closeNavBar() {
+    let navBar = document.getElementById("menu");
+    navBar.classList.remove('active');
 }

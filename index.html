@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Paul Schot</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,35 +11,36 @@
 
         <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="spinner.css">
+        <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="sidebar.css">
+		<link rel="stylesheet" href="content.css">
 
         <script src="scripts.js"></script>
     </head>
     <body>
         <div class="sidebar">
-            <div class="sidebar-header">
-                <h1>Paul Schot</h1>
-            </div>
-            
             <div class="sidebar-content">
-                <div class="menu">
+                <h1>Paul Schot</h1>
+
+                <button type="button" class="navButton" onclick="toggleNavBar()">
+                    <i class="fa fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
+                <nav id="menu" class="menu">
                     <a class="menuItem" href="javascript:swapContent('about')">About Me</a>
                     <a class="menuItem" href="javascript:swapContent('software_development')">Software Development</a>
                     <a class="menuItem" href="javascript:swapContent('education')">Education</a>
                     <a class="menuItem" href="javascript:swapContent('music')">Music</a>
                     <a class="menuItem" href="javascript:void(0)">Drawings - Coming Soon</a>
-                </div>
+                    <a class="menuItem" href="https://www.linkedin.com/in/paulschot/"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                </nav>
+            </div>
 
-				<div class="link-container">
-					<a href="https://www.linkedin.com/in/paulschot/">
-						<i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
-					</a>
-				</div>
-
+            <div class="sidebar-footer">
                 <div class="copyright">&copy; 2023 Paul Schot</div>
             </div>
         </div>
+
         <div class="content">
             <div id="about" class="content-block active">
                 <h2>About Me</h2>
@@ -79,7 +81,11 @@
                 <div class="content-block-content">
                     <h3>Employment</h3>
                     <div class="employment-block">
-                        <h4>Lead Application Developer, Net Assets Corporation <span>JUNE 2020 - PRESENT</span></h4>
+                        <h4 class="employment-header">
+                            <span class="employ-title">Lead Application Developer</span>
+                            <span class="employ-company">Net Assets Corporation</span>
+                            <span class="employ-time">JUNE 2020 - PRESENT</span>
+                        </h4>
                         <p>
                             Primary developer for multiple web applications, refining legacy code and developing new features. 
                             Communicating with customers to develop solutions. Manage the QA team responsible for automated and 
@@ -94,7 +100,11 @@
                         </ul>
                     </div>
                     <div class="employment-block">
-                        <h4>Web Application Developer, Net Assets Corporation <span>MARCH 2018 - JUNE 2020</span></h4>
+                        <h4 class="employment-header">
+                            <span class="employ-title">Web Application Developer</span>
+                            <span class="employ-company">Net Assets Corporation</span>
+                            <span class="employ-time">MARCH 2018 - JUNE 2020</span>
+                        </h4>
                         <p>
                             Developer on multiple web-based applications, refining and refactoring legacy code
                             and developing new features/products. Communicated with customers to develop solutions that 
@@ -104,7 +114,11 @@
                         </p>
                     </div>
                     <div class="employment-block">
-                        <h4>Intern, Portland State University <span>SUMMER 2016</span></h4>
+                        <h4 class="employment-header">
+                            <span class="employ-title">Intern</span>
+                            <span class="employ-company">Portland State University Computer Science</span>
+                            <span class="employ-time">JUNE 2016 - AUGUST 2016</span>
+                        </h4>
                         <p>
                             Worked with two other interns under Professor Andrew Black to improve the Grace programming 
                             language and its documentation. Debugged existing code, wrote built-in class methods utilizing 
@@ -112,10 +126,10 @@
                         </p>
                     </div>
                     
-                    <div class="skills-header">
-                        <h3>Skills</h3>
-                        <fieldset class="skillset-filters" onchange="filterSkills()">
-                            <h4>Filters:</h4>
+                    <h3>Skills</h3>
+                    <fieldset class="skillset-filters" onchange="filterSkills()">
+                        <h4>Filters:</h4>
+                        <div class="skillset-filters-container">
                             <div>
                                 <input type="radio" id="skillset_filter_all" name="skillset_filter" value="all" checked="checked">
                                 <label for="skillset_filter_all">All Skills</label>
@@ -132,14 +146,15 @@
                                 <input type="radio" id="skillset_filter_other" name="skillset_filter" value="other">
                                 <label for="skillset_filter_other">Miscellaneous</label>
                             </div>
-                        </fieldset>
-                    </div>
+                        </div>
+                    </fieldset>
                     
                     <div id="skillset" class="skillset">
                         <div class="skill advanced language">Java</div>
-                        <div class="skill proficient language">C#</div>
+                        <div class="skill familiar language">C#</div>
                         <div class="skill advanced language">JavaScript</div>
-                        <div class="skill proficient language">TypeScript</div>
+                        <div class="skill familiar technology">ReactJS</div>
+                        <div class="skill familiar language">TypeScript</div>
                         <div class="skill advanced language">SQL</div>
                         <div class="skill familiar language">C</div>
                         <div class="skill familiar language">PHP</div>
@@ -147,21 +162,23 @@
                         <div class="skill familiar language">Python</div>
                         <div class="skill familiar language">Swift</div>
                         <div class="skill advanced language">HTML</div>
-                        <div class="skill proficient language">CSS</div>
+                        <div class="skill familiar language">CSS</div>
                         <div class="skill advanced language">XML</div>
-                        <div class="skill proficient tech">XSLT</div>
+                        <div class="skill familiar tech">XSLT</div>
                         <div class="skill familiar language">LaTeX</div>
-                        <div class="skill proficient tech">Visual Studio Code</div>
+                        <div class="skill familiar tech">Visual Studio Code</div>
                         <div class="skill familiar tech">Netbeans IDE</div>
                         <div class="skill familiar tech">Eclipse IDE</div>
                         <div class="skill familiar tech">Xcode</div>
                         <div class="skill advanced tech">Git</div>
                         <div class="skill advanced tech">SVN</div>
-                        <div class="skill proficient tech">AJAX</div>
-                        <div class="skill proficient tech">JSON</div>
-                        <div class="skill proficient tech">Selenium WebDriver</div>
+                        <div class="skill familiar tech">AJAX</div>
+                        <div class="skill familiar tech">JSON</div>
+                        <div class="skill familiar tech">Selenium WebDriver</div>
                         <div class="skill familiar tech">Apache Tomcat</div>
                         <div class="skill advanced other">Object Oriented Programming</div>
+                        <div class="skill advanced other">Front-End Development</div>
+                        <div class="skill advanced other">Back-End Development</div>
                         <div class="skill advanced other">Debugging</div>
                         <div class="skill advanced other">Teamwork</div>
                         <div class="skill advanced other">Time Management</div>
@@ -171,17 +188,7 @@
     
                     <h3>Projects</h3>
                     <div class="project-block">
-                        <div class="project-header">
-                            <div>
-                                <h4>Swarm Intelligence Simulation</h4>
-                            </div>
-                            <div>
-                                <div class="skillset">
-                                    <div class="skill">Java</div>
-                                </div>
-                                <a href="https://github.com/mrbigschot/SISP" target="_blank">View Code</a>
-                            </div>
-                        </div>
+                        <h4>Swarm Intelligence Simulation</h4>
                         <p>
                             Inspired by the ability of an ant colony to locate food and communicate to each other, as well 
                             as the effort to simulate realistic flock patterns, I chose swarm intelligence as the subject of 
@@ -191,80 +198,82 @@
                             of the swarm in order to quickly gather the resource, as one "bug" can only carry so much back to 
                             the hive. Many variables can be set that define the behavior of the individuals within the swarm.
                         </p>
+                        <div class="project-footer">
+                            <div class="skillset">
+                                <div class="skill">Java</div>
+                            </div>
+                            <a href="https://github.com/mrbigschot/SISP" target="_blank">View Code</a>
+                        </div>
                     </div>
                     <div class="project-block">
-                        <div class="project-header">
-                            <div>
-                                <h4>Human Body Digitizer Web Tool</h4>
-                            </div>
-                            <div>
-                                <div class="skillset">
-                                    <div class="skill">HTML</div>
-                                    <div class="skill">CSS</div>
-                                    <div class="skill">JavaScript</div>
-                                </div>
-                                <a href="https://github.com/mrbigschot/Digitizer" target="_blank">View Code</a>
-                            </div>
-                        </div>
+                        <h4>Human Body Digitizer Web Tool</h4>
                         <p>
                             Developed an online human body digitizer tool to be used in Pacific University Exercise Science 
                             classes. Datasets and images are provided by instructors and then can be cycled through and clicked
                             on to generate coordinates in a downloadable spreadsheet.
                         </p>
+                        <div class="project-footer">
+                            <div class="skillset">
+                                <div class="skill">HTML/CSS</div>
+                                <div class="skill">JavaScript</div>
+                            </div>
+                            <a href="https://github.com/mrbigschot/Digitizer" target="_blank">View Code</a>
+                        </div>
                     </div>
                     <div class="project-block">
-                        <div class="project-header">
-                            <div>
-                                <h4>Braitenberg Vehicle/Genetic Algorithm Simulation</h4>
-                            </div>
-                            <div>
-                                <div class="skillset">
-                                    <div class="skill">Java</div>
-                                </div>
-                                <a href="https://github.com/mrbigschot/BraitenbergNaturalSelection" target="_blank">View Code</a>
-                            </div>
-                        </div>
+                        <h4>Braitenberg Vehicle/Genetic Algorithm Simulation</h4>
                         <p>
                             A combination of <a target="_blank" href="https://en.wikipedia.org/wiki/Braitenberg_vehicle">Braitenberg Vehicles</a> and 
                             natural selection algorithms. Some vehicles are assigned the role of predator and others prey, with sensors corresponding
                             to their desired food source and threat. Fitness is determined by how much the vehicles "eat". Traits that
                             benefit survival are carried on to the next generation, and traits that hinder survival are eliminated.
                         </p>
+                        <div class="project-footer">
+                            <div class="skillset">
+                                <div class="skill">Java</div>
+                            </div>
+                            <a href="https://github.com/mrbigschot/BraitenbergNaturalSelection" target="_blank">View Code</a>
+                        </div>
                     </div>
                     <div class="project-block">
-                        <div class="project-header">
-                            <div>
-                                <h4>Hexapawn Rote Learner</h4>
-                            </div>
-                            <div>
-                                <div class="skillset">
-                                    <div class="skill">Java</div>
-                                </div>
-                                <a href="https://github.com/mrbigschot/PawnPlayer" target="_blank">View Code</a>
-                            </div>
-                        </div>
+                        <h4>Hexapawn Rote Learner</h4>
                         <p>
                             Developed an AI that learns how to play hexapawn, a simplified version of chess where the only pieces 
                             are pawns. The AI can play against a human opponent and gradually learn how to play the game, or it can 
                             be trained against a computer opponent utilizing random play styles and MinMax strategies to quickly train 
                             it.
                         </p>
+                        <div class="project-footer">
+                            <div class="skillset">
+                                <div class="skill">Java</div>
+                            </div>
+                            <a href="https://github.com/mrbigschot/PawnPlayer" target="_blank">View Code</a>
+                        </div>
                     </div>
                     <div class="project-block">
-                        <div class="project-header">
-                            <div>
-                                <h4>Graph Theory Path Finder</h4>
+                        <h4>Spotify Playlist Creator</h4>
+                        <p>
+                            A React application that uses the Spotiyfy API to search for songs and create playlists.
+                        </p>
+                        <div class="project-footer">
+                            <div class="skillset">
+                                <div class="skill">ReactJS</div>
+                                <div class="skill">HTML/CSS</div>
                             </div>
-                            <div>
-                                <div class="skillset">
-                                    <div class="skill">C#</div>
-                                </div>
-                                <a href="https://github.com/mrbigschot/PathFinder" target="_blank">View Code</a>
-                            </div>
+                            <a href="https://github.com/mrbigschot/Jammming" target="_blank">View Code</a>
                         </div>
+                    </div>
+                    <div class="project-block">
+                        <h4>Graph Theory Path Finder</h4>
                         <p>
                             A small application that traverses a graph, finding the optimal path between two vertices.
                         </p>
+                        <div class="project-footer">
+                            <div class="skillset">
+                                <div class="skill">C#</div>
+                            </div>
+                            <a href="https://github.com/mrbigschot/PathFinder" target="_blank">View Code</a>
+                        </div>
                     </div>
                     <!-- <div class="project-block">
                         <div class="project-header">
@@ -292,7 +301,10 @@
                 <div class="content-block-content">
                     <div>
                         <div class="education-block">
-                            <h3>Willamette University <span>Salem, OR</span></h3>
+                            <h3 class="education-header">
+                                <span>Willamette University</span>
+                                <span>Salem, OR</span>
+                            </h3>
                             
                             <p>Bachelor of Arts in Computer Science, Minors in Physics and Mathematics</p>
                             <p>Graduated May 2017, <em>cum laude</em>, G.P.A. 3.83</p>
@@ -330,7 +342,10 @@
                     </div>
     
                     <div>
-                        <h3>Portland Community College <span>Portland, OR</span></h3>
+                        <h3 class="education-header">
+                            <span>Portland Community College</span>
+                            <span>Portland, OR</span>
+                        </h3>
                         <p>I took some classes after graduating from Willamette to learn some new skills</p>
                         
                         <div>
@@ -345,7 +360,10 @@
                     </div>
 
                     <div>
-                        <h3>Forest Grove High School <span>Forest Grove, OR</span></h3>
+                        <h3 class="education-header">
+                            <span>Forest Grove High School</span>
+                            <span>Forest Grove, OR</span>
+                        </h3>
                         <p>Honors Diploma</p>
                         <p>Graduated June 2013, top 1% of class, G.P.A. 3.94 (4.27 weighted)</p>
 

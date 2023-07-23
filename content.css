@@ -1,0 +1,147 @@
+.content {
+    overflow: auto;
+    max-height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    flex: 2;
+}
+.content-block {
+    padding-top: 10px;
+    display: none;
+}
+.content-block.active { display: block; }
+
+.content-block-content > div {
+    margin-bottom: 10px;
+}
+/********** EDUCATION SECTION **********/
+h3.education-header span:nth-child(2)::before { content: " - "; }
+/********** SOFTWARE SECTION **********/
+div.employment-block,
+div.project-block {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    background: #fff4;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+h4.employment-header span.employ-company { font-style: italic; }
+h4.employment-header span.employ-company::before {
+    content: " - ";
+}
+h4.employment-header span.employ-time {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.8rem;
+    padding-left: 0.5em;
+}
+
+div.skills-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+fieldset.skillset-filters {
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    display: block;
+}
+/* fieldset.skillset-filters h4 { display: inline-block; margin: 0; } */
+/* fieldset.skillset-filters div { display: inline-block; } */
+div.skillset-filters-container { 
+    display: flex;
+    flex-direction: row;
+}
+div.skillset-filters-container div + div { margin-left: 8px; }
+
+div.skillset > div.skill {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--light-color);
+    padding: 0.25em 1.0em;
+    border-radius: 8px;
+    margin: 4px 2px 4px 2px;
+    border: 2px solid var(--accent-color);
+    position: relative;
+}
+div.skillset > div.skill.advanced {
+    background: var(--accent-color);
+    color: var(--light-color);
+}
+div.skillset > div.skill.familiar {
+    background: var(--accent-color-2);
+    color: var(--light-color);
+}
+div.skillset.show_language div.skill.tech,
+div.skillset.show_language div.skill.other {
+    display: none;
+}
+div.skillset.show_tech div.skill.language,
+div.skillset.show_tech div.skill.other {
+    display: none;
+}
+div.skillset.show_other div.skill.tech,
+div.skillset.show_other div.skill.language {
+    display: none;
+}
+
+div.project-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+div.project-footer div.skillset {
+    display: inline-block;
+    font-size: 0.75em;
+}
+div.project-footer a {
+    display: inline-block;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-left: 1em;
+}
+/********** MUSIC SECTION **********/
+.acapellaLink { padding: 4px; }
+.acapellaLink a { text-transform: uppercase; }
+.acapellaLink a span.artist {
+    margin-left: 1em;
+    font-weight: normal;
+    font-style: italic;
+    font-size: .75em;
+    text-transform: none;
+}
+
+@media only screen and (max-width: 600px) {
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+
+    .content {
+        padding-left: 5%;
+        padding-right: 5%;
+        min-width: 300px;
+        max-height: 90vh;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    h4.employment-header span { display: block; }
+    h4.employment-header span.employ-company { font-style: italic; }
+    h4.employment-header span.employ-company::before { display: none; }
+    h4.employment-header span.employ-time { padding-left: 0; }
+
+    div.skillset-filters-container {
+        flex-direction: column;
+        align-items: start;
+    }
+    div.skillset-filters-container div + div { margin-left: 0; }
+    
+    h3.education-header span { display: block; }
+    h3.education-header span:nth-child(2) {
+        font-size: 1.1rem;
+        font-style: italic;
+    }
+    h3.education-header span:nth-child(2)::before { display: none; }
+}
