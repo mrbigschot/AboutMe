@@ -1,26 +1,36 @@
-function swapContent(nextID) {
-    closeNavBar();
-    var activeBlock = document.querySelector(".content-block.active");
-    if (activeBlock && activeBlock.id === nextID) return;
-
-    var contentBlocks = document.querySelectorAll(".content-block");
-    for (var ii = 0; ii < contentBlocks.length; ii++) {
-        var block = contentBlocks[ii];
-        if (block.classList.contains ("active")) block.classList.remove("active");
+function startup() {
+    let urlParams = new URLSearchParams(window.location.search);
+    let content = urlParams.get("content");
+    if (content) {
+        showContent(content);
+    } else {
+        showContent("about");
     }
+}
 
-    document.getElementById("spinner").classList.add("active");
-    window.location = "#spinner";
-    scrollTo(0,0);
-
-    setTimeout(function () {
-        if (document.getElementById(nextID)) {
-            document.getElementById("spinner").classList.remove("active");
-            document.getElementById(nextID).classList.add("active");
-            window.location = "#" + nextID;
-            scrollTo(0,0);
+function showContent(contentID) {
+    let contentFound = false;
+    let contentBlocks = document.querySelectorAll(".content-block");
+    contentBlocks.forEach(function (block) {
+        if (block.id === contentID) {
+            block.classList.add("active");
+            contentFound = true;
+        } else if (block.id !== "error") {
+            block.parentElement.removeChild(block);
         }
-    }, 1500);
+    });
+    let errorContent = document.getElementById("error");
+    if (contentFound) {
+        errorContent.parentElement.removeChild(errorContent);
+    } else {
+        errorContent.classList.add("active");
+    }
+}
+function swapContent(nextID) {
+    let targetUrl = new URL(window.location.href);
+    targetUrl.searchParams.delete("content");
+    targetUrl.searchParams.append("content", nextID);
+    window.location.href = targetUrl;
 }
 
 function filterSkills() {

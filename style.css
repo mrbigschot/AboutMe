@@ -1,17 +1,25 @@
 html {
     --primary-color: rgb(50, 159, 91);
+    --primary-accent-color: rgb(93, 223, 143);
     --light-color: rgb(199, 221, 211);
     --dark-color: rgb(57, 57, 58);
+    --white-color: rgb(255, 255, 255);
     --accent-color: rgb(80, 140, 164);
     --accent-color-2: rgb(132, 177, 196);
+    --body-bg-color: var(--dark-color);
+    --body-color: var(--light-color);
+    --heading-color: var(--primary-color);
+    --link-color: var(--primary-accent-color);
+    --link-hover-color: var(--accent-color);
+    --block-color: #fff3;
     font-size: 16px;
 }
 body {
     padding: 0px;
     margin: 0px;
     font-family: 'Fira Sans', sans-serif;
-    background-color: var(--light-color);
-    color: var(--dark-color);
+    background-color: var(--body-bg-color);
+    color: var(--body-color);
 
     display: flex;
     flex-direction: row;
@@ -21,7 +29,7 @@ body {
 h1 {
     font-size: 2.25rem;
     padding-bottom: 20px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--white-color);
     letter-spacing: 0.15rem;
 }
 h2 {
@@ -31,7 +39,7 @@ h2 {
 }
 h3 {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--heading-color);
     text-transform: uppercase;
     margin-bottom: 0.75rem;
 }
@@ -50,9 +58,9 @@ ul {
 a {
     text-decoration: none;
     font-weight: bold;
-    color: var(--accent-color);
+    color: var(--link-color);
 }
-a:hover { color: var(--dark-color); }
+a:hover { color: var(--link-hover-color); }
 
 @media only screen and (max-width: 600px) {
     body { display: block; }

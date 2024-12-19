@@ -18,7 +18,7 @@
 
         <script src="scripts.js"></script>
     </head>
-    <body>
+    <body onload="startup()">
         <div class="sidebar">
             <div class="sidebar-content">
                 <h1>Paul Schot</h1>
@@ -31,18 +31,19 @@
                     <a class="menuItem" href="javascript:swapContent('software_development')">Software Development</a>
                     <a class="menuItem" href="javascript:swapContent('education')">Education</a>
                     <a class="menuItem" href="javascript:swapContent('music')">Music</a>
-                    <a class="menuItem" href="javascript:void(0)">Drawings - Coming Soon</a>
+                    <a class="menuItem" href="javascript:void(0)">Art - Coming Soon</a>
                     <a class="menuItem" href="https://www.linkedin.com/in/paulschot/"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+                    <a class="menuItem" href="https://github.com/mrbigschot/"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
                 </nav>
             </div>
 
             <div class="sidebar-footer">
-                <div class="copyright">&copy; 2023 Paul Schot</div>
+                <div class="copyright">&copy; 2025 Paul Schot</div>
             </div>
         </div>
 
         <div class="content">
-            <div id="about" class="content-block active">
+            <div id="about" class="content-block">
                 <h2>About Me</h2>
 				<div class="content-block-content">
 					<p>
@@ -95,7 +96,7 @@
                         <ul>
                             <li>Wrote a significant portion of the code base for two new products now used by municipalities in multiple U.S. states.</li>
                             <li>Rebuilt the financial engine of an older product allowing for more accurate calculations while also making it easier to fix mistakes due to user error.</li>
-                            <li>Implemented change from storing PDF documents in a company-maintained database to AWS S3 storage.</li>
+                            <li>Implemented multiple AWS services into products to free up company resources.</li>
                             <li>Programmed user-input validation tools for use across all products allowing developers to reuse existing logic more efficiently.</li>
                         </ul>
                     </div>
@@ -297,20 +298,21 @@
 
             <div id="education" class="content-block">
                 <h2>Education</h2>
-
+                
+                <h3>College</h3>
                 <div class="content-block-content">
                     <div>
                         <div class="education-block">
-                            <h3 class="education-header">
+                            <h4 class="education-header">
                                 <span>Willamette University</span>
                                 <span>Salem, OR</span>
-                            </h3>
-                            
+                            </h4>
+
                             <p>Bachelor of Arts in Computer Science, Minors in Physics and Mathematics</p>
                             <p>Graduated May 2017, <em>cum laude</em>, G.P.A. 3.83</p>
                         
                             <div>
-                                <h4>Honors and Awards</h4>
+                                <h5>Honors and Awards</h5>
                                 <ul>
                                     <li>Phi Beta Kappa inductee 2017</li>
                                     <li>Computer Science Department Honors 2017</li>
@@ -321,7 +323,7 @@
                             </div>
     
                             <div>
-                                <h4>Courses Taken</h4>
+                                <h5>Notable Courses Taken</h5>
                                 <ul>
                                     <li>Analysis of Algorithms</li>
                                     <li>Architecture and Compilers</li>
@@ -341,15 +343,15 @@
                         </div>
                     </div>
     
-                    <div>
-                        <h3 class="education-header">
+                    <div class="education-block">
+                        <h4 class="education-header">
                             <span>Portland Community College</span>
                             <span>Portland, OR</span>
-                        </h3>
+                        </h4>
                         <p>I took some classes after graduating from Willamette to learn some new skills</p>
                         
                         <div>
-                            <h4>Courses Taken</h4>
+                            <h5>Notable Courses Taken</h5>
                             <ul>
                                 <li>C Programming</li>
                                 <li>Introduction to Programming Using C#.NET</li>
@@ -359,16 +361,17 @@
                         </div>
                     </div>
 
-                    <div>
-                        <h3 class="education-header">
+                    <h3>High School</h3>
+                    <div class="education-block">
+                        <h4 class="education-header">
                             <span>Forest Grove High School</span>
                             <span>Forest Grove, OR</span>
-                        </h3>
+                        </h4>
                         <p>Honors Diploma</p>
-                        <p>Graduated June 2013, top 1% of class, G.P.A. 3.94 (4.27 weighted)</p>
+                        <p>Graduated June 2013, top 1% of class, G.P.A. 3.94 (4.17 weighted)</p>
 
                         <div>
-                            <h4>Honors and Awards</h4>
+                            <h5>Honors and Awards</h5>
                             <ul>
                                 <li>National Merit Scholar 2013 (top 0.5% of all entrants)</li>
                                 <li>Viking Achievement Award 2013 (student-athlete recognized by faculty for overall outstanding contributions to Forest Grove High School)</li>
@@ -474,12 +477,11 @@
                 </div>
             </div>
 
-            <div id="spinner">
-                <div class="spin-container">
-                    <div class="spin" id="loader"></div>
-                    <div class="spin" id="loader2"></div>
-                    <div class="spin" id="loader3"></div>
-                    <div class="spin" id="loader4"></div>
+            <div id="error" class="content-block">
+                <h2>Hmmm...</h2>
+
+                <div class="content-block-content">
+                    <p>I can't find the content you are looking for. Please use one of the links in the navigation menu.</p>
                 </div>
             </div>
         </div>
